@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-image: linear-gradient(rgb(201, 111, 81),rgb(109, 101, 26));
+            background-color: rgb(93, 255, 236);
+        }
+     .one{
+        width: 30%;
+        height: 30%;
+       background-image:  linear-gradient(rgb(201, 90, 53),rgb(80, 74, 18));
+        margin:7% 35%;
+      
+        border-radius: 15%;
+        display: flex;
+        justify-content: space-evenly;
+     flex-direction: column;
+     }
+     #heading{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+     }
+     #result{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        color: bisque;
+     }
+     #result2{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        color: bisque;
+     }
+     .two, #button1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+     }
+     .two input{
+  height: 30px;
+  
+color: brown;
+     }
+   #button1{
+  color: brown;
+  background-color: burlywood;
+    height: 25px;
+  margin-left: 150px;
+   }
+  
+    </style>
+</head>
+<body>
+    <script>
+        function convert1(){
+            let a=Number(document.getElementById("firstvalue").value);
+            let total=(a-32)/1.8;
+            let c=document.getElementById("result");
+            c.innerHTML=total.toFixed(3)+ "°C" ;
+        }
+       
+        function convert2(){
+            let a=Number(document.getElementById("secvalue").value);
+            let total=(a*9/5) + 32.
+            let c=document.getElementById("result2");
+            c.innerHTML=total.toFixed(3)+"°F" ;
+        }
+ 
+    </script>
+
+    <div class="one">
+        <h3 id="heading">Fahrenheit to celsius</h3>
+<div class="two">
+    <input type="text" id="firstvalue" placeholder="Fahrenheit :">
+</div>
+<div >
+    <button id="button1"  type="submit" onclick="convert1()">Convert to celsius</button>
+</div>
+<div id="result"></div>
+
+    </div>
+    
+    <div class="one">
+        <h3 id="heading">Celsius to fahrenheit</h3>
+<div class="two">
+    <input type="text" id="secvalue" placeholder="Celsius:">
+</div>
+<div >
+    <button id="button1"  type="submit" onclick="convert2()">Convert to fahrenheit</button>
+</div>
+<div id="result2"></div>
+
+    </div>
+</body>
+</html>
